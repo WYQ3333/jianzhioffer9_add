@@ -24,12 +24,42 @@ public:
 	}
 };
 
+class Solution2 {
+public:
+	vector<int> FindNumbersWithSum(vector<int> array, int sum) {
+		vector<int> result;
+		int length = array.size();
+		if (length <= 1)
+			return result;
+
+		int i = 0;
+		int j = length - 1;
+		int Sum;
+
+		while (i < j)
+		{
+			Sum = array[i] + array[j];
+			if (Sum > sum)
+				j--;
+			else if (Sum < sum)
+				i++;
+			else
+			{
+				result.push_back(array[i]);
+				result.push_back(array[j]);
+				break;
+			}
+		}
+		return result;
+	}
+};
+
 int main(){
 	vector<int> array = { 1, 2, 3, 4, 5, 6, 7 };
 	vector<int> arraynum = {0,0};
 	int sum = 7;
-	Solution1 s1;
-	arraynum = s1.FindNumbersWithSum(array, sum);
+	Solution2 s2;
+	arraynum = s2.FindNumbersWithSum(array, sum);
 	int i = 0;
 	for (i = 0; i < arraynum.size(); ++i){
 		cout << arraynum[i]<<" ";
