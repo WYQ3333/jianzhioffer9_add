@@ -54,10 +54,12 @@ public:
 	}
 };
 
+
+
 int main(){
 	vector<int> array = { 1, 2, 3, 4, 5, 6, 7 };
 	vector<int> arraynum = {0,0};
-	int sum = 7;
+	int sum = 14;
 	Solution2 s2;
 	arraynum = s2.FindNumbersWithSum(array, sum);
 	int i = 0;
