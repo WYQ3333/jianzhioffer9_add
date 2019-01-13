@@ -57,9 +57,9 @@ public:
 
 
 int main(){
-	vector<int> array = { 1, 2, 3, 4, 5, 6, 7 };
+	vector<int> array = { 2,3,3,4,4,4,56,7 };
 	vector<int> arraynum = {0,0};
-	int sum = 14;
+	int sum = 8;
 	Solution2 s2;
 	arraynum = s2.FindNumbersWithSum(array, sum);
 	int i = 0;
